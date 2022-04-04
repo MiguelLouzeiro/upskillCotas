@@ -1,9 +1,10 @@
-public class Circle {
+public class Circle extends Figure {
 
     private Point center;
     private double radius;
 
-    public Circle(Point center, double radius) {
+    public Circle(String color, Point center, double radius) {
+        super(color);
         this.center = center;
         this.radius = radius;
     }
@@ -26,6 +27,16 @@ public class Circle {
 
     public void expand(double scaleFactor){
 
+    }
+
+    @Override
+    public double perimeter (){
+        return 2 * Math.PI * this.radius   ;
+    }
+
+    @Override
+    public double area() {
+        return 0;
     }
 
 }
