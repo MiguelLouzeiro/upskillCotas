@@ -1,10 +1,21 @@
 public class Rectangule extends Figure {
     Point upperLeft;
-    float bottomRight;
+    Point bottomRight;
 
-    public Rectangule(String color, Point upperLeft, float bottomRight) {
+    public Rectangule(String color, Point upperLeft, Point bottomRight) {
         super(color);
         this.upperLeft = upperLeft;
         this.bottomRight = bottomRight;
+    }
+
+    public double area(Point upperLeft, Point bottomRight) {
+        int lado1, lado2;
+        double area;
+        // hipotenusa = (Math.pow((upperLeft.getpX()-bottomRight.getpX()),2) + Math.pow((upperLeft.getpY()-bottomRight.getpY()),2));
+        lado1 = Math.abs (upperLeft.getpX()- bottomRight.getpX());
+        lado2 = Math.abs (upperLeft.getpY()- bottomRight.getpY());
+
+        return area=lado1*lado2;
+
     }
 }
